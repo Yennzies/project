@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="sign in style.css">
+  <title>Muvi - Sign in</title>
+</head>
+<body>
+  <div class="container">
+    <div class="box signing">
+      <h2>Already have an Account</h2>
+      <button class="signinBtn">Sign in</button>
+    </div>
+    <div class="box signup">
+      <!-- <p id="error-message" style="color: red;"></p> -->
+      <h2>Don't have an Account ?</h2>
+      <button class="signupBtn">Sign Up</button>
+    </div>
+    <div class="formBx">
+      <div class="form signinform">
+        <form>
+          <h3>Sign in</h3>
+          <p id="error-message" style="color: red;"></p>
+          <input type="text" placeholder="Username" id="logIn-userName">
+          <input type="password" placeholder="Password" id="logIn-passWord">
+          <input type="submit" value="Login" id="logIn">
+          <a href="a" class="forgot">Forgot Password</a>
+        </form>
+      </div>
+
+      <div class="form signupform">
+        <form>
+          <h3>Sign Up</h3>
+          <input type="text" placeholder="Username" id="signUp-userName">
+          <input type="password" placeholder="Password" id="signUp-passWord">
+          <input type="password" placeholder="Confirm">
+          <input type="submit" value="Register" id="signUp">
+        
+        </form>
+        
+
+      </div>
+    </div>
+  </div>
+    <script>
+      let signinBtn = document.querySelector(".signinBtn");
+      let signupBtn = document.querySelector(".signupBtn");
+      let body = document.querySelector("body");
+
+    signupBtn.addEventListener("click", function() {
+      body.classList.add("slide")
+    })
+    signinBtn.addEventListener("click", function() {
+      body.classList.remove("slide")
+    })
+    </script>
+  
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+  <script src="main.js"></script>
+</body>
+</html>
